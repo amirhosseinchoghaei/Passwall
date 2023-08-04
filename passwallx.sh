@@ -62,3 +62,5 @@ opkg install dnsmasq-full
 sleep 2
 
 echo -e "${GREEN}Done ! ${NC}"
+
+echo -e "${GREEN} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
