@@ -21,3 +21,5 @@ opkg update
 opkg install luci-app-passwall2
 
 echo -e "${GREEN}Done ! ${NC}"
+
+echo -e "${GREEN} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
