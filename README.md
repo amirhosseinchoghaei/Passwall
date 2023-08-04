@@ -22,4 +22,3 @@ Done !
 ```
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx2.sh && chmod 777 passwallx2.sh && sh passwallx2.sh
 ```
-Done !
