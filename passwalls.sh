@@ -64,3 +64,5 @@ sleep 2
 echo -e "${GREEN}Done ! ${NC}"
 
 echo -e "${GREEN} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+
+rm passwalls.sh
