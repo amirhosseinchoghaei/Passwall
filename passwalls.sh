@@ -25,6 +25,8 @@ wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-
 opkg-key add passwall.pub
 
 
+>/etc/opkg/customfeeds.conf
+
 read arch << EOF
 $(. /etc/openwrt_release ; echo $DISTRIB_ARCH)
 EOF
