@@ -9,15 +9,8 @@ wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwal
 ```
 Done !
 
-=======================================================
- - INSTALL PASSWALL ON #SNAPSHOT Versions
+# IF Your Openwrt IS SNAPSHOT
 ```
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
 in case you use a snapshot build
-
-=======================================================
- - INSTALL PASSWALL 2
-```
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx2.sh && chmod 777 passwallx2.sh && sh passwallx2.sh
-```
