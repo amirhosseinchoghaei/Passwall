@@ -62,7 +62,22 @@ sleep 2
 opkg install dnsmasq-full
 sleep 2
 
-echo -e "${GREEN}Done ! ${NC}"
+####install_xray
+opkg install xray-core
+
+RESULT=`ls /usr/bin/xray`
+
+if [ "$RESULT" == "/usr/bin/xray" ]; then
+
+echo -e "${GREEN} Done ! ${NC}"
+
+ else
+           
+wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+
+fi
+
+
 
 echo -e "${GREEN} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
 
