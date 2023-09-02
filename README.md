@@ -1,6 +1,6 @@
 # Passwall
 [![visitor badge](https://img.shields.io/badge/Chat%20on-Telegram-blue.svg)](https://t.me/AmirHosseinTSL)
-# How to install Passwall on openwrt
+# How to install Passwall & Xray on openwrt
 
 
 - INSTALL PASSWALL : Run this command in openwrt remote ssh
