@@ -78,8 +78,54 @@ wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amir
 fi
 
 
+uci delete wireless.radio1.disabled='1'
+uci delete wireless.default_radio1.disabled='1'
+uci set wireless.default_radio1.ssid='HiFi 5G'
+uci set wireless.default_radio1.encryption='psk2+ccmp'
+uci set wireless.default_radio1.key='10203040'
+uci set wireless.default_radio1.mode='ap'
+uci set wireless.default_radio1.network='lan'
 
-echo -e "${GREEN} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+
+uci delete wireless.radio0.disabled='1'
+uci delete wireless.default_radio0.disabled='1'
+uci set wireless.default_radio0.ssid='HiFi 2G'
+uci set wireless.default_radio0.encryption='psk2+ccmp'
+uci set wireless.default_radio0.key='10203040'
+uci set wireless.default_radio0.mode='ap'
+uci set wireless.default_radio0.network='lan'
+
+
+uci commit wireless
+
+wifi
+
+uci set system.@system[0].hostname=AmirHossein
+
+uci commit system
+
+/sbin/reload_config
+
+sleep 7
+
+uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
+uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
+uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
+uci set passwall.@global[0].udp_node='tcp'
+
+uci commit passwall
+
+/sbin/reload_config
+
+echo -e "${YELLOW} WiFi SSID : HiFi 2G ${ENDCOLOR}"
+echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+echo -e "${YELLOW} WiFi SSID : HiFi 5G ${ENDCOLOR}"
+echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+
+echo -e "${BLUE} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+
 
 
 rm passwallx.sh
