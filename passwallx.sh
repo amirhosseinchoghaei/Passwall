@@ -100,7 +100,7 @@ uci commit wireless
 
 wifi
 
-uci set system.@system[0].hostname=AmirHossein
+uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
 
