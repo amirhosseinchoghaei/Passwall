@@ -4,7 +4,7 @@
 
 ![This is an image](https://pars-space.ir/wp-content/uploads/2023/09/v2ray-openwrt.jpg)
 
-- INSTALL PASSWALL : Run this command in openwrt remote ssh
+# INSTALL PASSWALL : Run this command in openwrt remote ssh
 ```
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx.sh && chmod 777 passwallx.sh && sh passwallx.sh
 ```
