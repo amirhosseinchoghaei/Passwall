@@ -128,7 +128,8 @@ uci set system.@system[0].hostname=By-AmirHossein
 uci commit system
 
 /sbin/reload_config
-
+uci set passwall.@global[0].tcp_proxy_mode='global'
+uci set passwall.@global[0].udp_proxy_mode='global'
 uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
 uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
 uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
