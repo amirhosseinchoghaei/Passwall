@@ -22,12 +22,12 @@ in case you use a snapshot build
  
 ⚠️ LAN IP ADDRESS : 192.168.27.1
 
-📶 WiFi 2Ghz SSID : HiFi 2G
+📶 WiFi 2Ghz SSID : VPN 2G
 
 🔑 Password : 10203040
 
 
-📶 WiFi 5Ghz SSID : HiFi 5G
+📶 WiFi 5Ghz SSID : VPN 5G
 
 🔑 Password : 10203040
 
