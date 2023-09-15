@@ -141,6 +141,8 @@ uci set passwall.@global[0].udp_node='tcp'
 
 uci commit passwall
 
+/sbin/reload_config
+
 uci set network.lan.proto='static'
 uci set network.lan.netmask='255.255.255.0'
 uci set network.lan.ipaddr='192.168.27.1'
