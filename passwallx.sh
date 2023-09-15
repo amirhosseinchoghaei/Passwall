@@ -158,3 +158,6 @@ uci commit
 /etc/init.d/network reload
 
 rm passwallx.sh
+
+reboot
+
