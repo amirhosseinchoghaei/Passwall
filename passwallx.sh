@@ -97,7 +97,9 @@ echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 echo -e "${YELLOW} WiFi SSID : HiFi 5G ${ENDCOLOR}"
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 
-echo -e "${BLUE} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
+
+echo -e "${MAGENTA} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
 
 sleep 7
 
@@ -138,6 +140,16 @@ uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
 uci set passwall.@global[0].udp_node='tcp'
 
 uci commit passwall
+
+
+uci set network.lan.proto='static'
+uci set network.lan.netmask='255.255.255.0'
+uci set network.lan.ipaddr='192.168.27.1'
+uci set network.lan.delegate='0'
+
+uci commit network
+
+uci commit
 
 /sbin/reload_config
 
