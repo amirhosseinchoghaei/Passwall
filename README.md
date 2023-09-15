@@ -32,4 +32,4 @@ in case you use a snapshot build
 🔑 Password : 10203040
 
 
-✅ Tested On : mi 4a gigabit , TP-Link C6 v3 , Mikrotik Hap ac2
+✅ Tested On : mi 4a gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v2 , Linksys ea8100 v1
