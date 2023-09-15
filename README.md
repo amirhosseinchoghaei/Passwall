@@ -18,6 +18,8 @@ in case you use a snapshot build
 
 # Help
 
+- After installation settings will be change :
+ 
 ⚠️ LAN IP ADDRESS : 192.168.27.1
 
 📶 WiFi SSID : HiFi 2G
