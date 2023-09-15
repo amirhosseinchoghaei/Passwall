@@ -105,7 +105,7 @@ sleep 7
 
 uci delete wireless.radio1.disabled='1'
 uci delete wireless.default_radio1.disabled='1'
-uci set wireless.default_radio1.ssid='HiFi 5G'
+uci set wireless.default_radio1.ssid='VPN 5G'
 uci set wireless.default_radio1.encryption='psk2+ccmp'
 uci set wireless.default_radio1.key='10203040'
 uci set wireless.default_radio1.mode='ap'
@@ -114,7 +114,7 @@ uci set wireless.default_radio1.network='lan'
 
 uci delete wireless.radio0.disabled='1'
 uci delete wireless.default_radio0.disabled='1'
-uci set wireless.default_radio0.ssid='HiFi 2G'
+uci set wireless.default_radio0.ssid='VPN 2G'
 uci set wireless.default_radio0.encryption='psk2+ccmp'
 uci set wireless.default_radio0.key='10203040'
 uci set wireless.default_radio0.mode='ap'
