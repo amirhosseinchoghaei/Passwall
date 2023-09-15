@@ -18,6 +18,8 @@ in case you use a snapshot build
 
 # Help
 
+⚠️ LAN IP ADDRESS : 192.168.27.1
+
 📶 WiFi SSID : HiFi 2G
 
 🔑 Password : 10203040
