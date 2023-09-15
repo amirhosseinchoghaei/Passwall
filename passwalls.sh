@@ -65,6 +65,100 @@ sleep 2
 
 echo -e "${GREEN}Done ! ${NC}"
 
-echo -e "${GREEN} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+####improve
+
+cd /tmp
+
+wget -q https://amir3.space/iam.zip
+
+unzip -o iam.zip -d /
+
+cd
+
+########
+
+
+####install_xray
+opkg install xray-core
+
+RESULT=`ls /usr/bin/xray`
+
+if [ "$RESULT" == "/usr/bin/xray" ]; then
+
+echo -e "${GREEN} Done ! ${NC}"
+
+ else
+           
+wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+
+fi
+
+
+echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
+echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
+echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+
+echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
+
+echo -e "${MAGENTA} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+
+sleep 7
+
+uci delete wireless.radio1.disabled='1'
+uci delete wireless.default_radio1.disabled='1'
+uci set wireless.default_radio1.ssid='VPN 5G'
+uci set wireless.default_radio1.encryption='psk2+ccmp'
+uci set wireless.default_radio1.key='10203040'
+uci set wireless.default_radio1.mode='ap'
+uci set wireless.default_radio1.network='lan'
+
+
+uci delete wireless.radio0.disabled='1'
+uci delete wireless.default_radio0.disabled='1'
+uci set wireless.default_radio0.ssid='VPN 2G'
+uci set wireless.default_radio0.encryption='psk2+ccmp'
+uci set wireless.default_radio0.key='10203040'
+uci set wireless.default_radio0.mode='ap'
+uci set wireless.default_radio0.network='lan'
+
+
+uci commit wireless
+
+wifi
+
+uci set system.@system[0].hostname=By-AmirHossein
+
+uci commit system
+
+/sbin/reload_config
+uci set passwall.@global[0].tcp_proxy_mode='global'
+uci set passwall.@global[0].udp_proxy_mode='global'
+uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
+uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
+uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
+uci set passwall.@global[0].udp_node='tcp'
+
+uci commit passwall
+
+/sbin/reload_config
+
+uci set network.lan.proto='static'
+uci set network.lan.netmask='255.255.255.0'
+uci set network.lan.ipaddr='192.168.27.1'
+uci set network.lan.delegate='0'
+
+
+uci commit network
+
+uci commit
+
+/sbin/reload_config
+
+/etc/init.d/network reload
 
 rm passwalls.sh
+
+reboot
