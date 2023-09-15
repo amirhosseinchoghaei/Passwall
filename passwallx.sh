@@ -92,9 +92,9 @@ wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amir
 fi
 
 
-echo -e "${YELLOW} WiFi SSID : HiFi 2G ${ENDCOLOR}"
+echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
-echo -e "${YELLOW} WiFi SSID : HiFi 5G ${ENDCOLOR}"
+echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
