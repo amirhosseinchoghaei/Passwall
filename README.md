@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwal
 ```
 Done !
 
-# IF You are Using SNAPSHOT
+# IF You are Using SNAPSHOT Version
 ```
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
