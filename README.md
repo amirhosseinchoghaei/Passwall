@@ -14,7 +14,7 @@ Done !
 ```
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
-in case you use a snapshot build
+📍in case you use a snapshot build
 
 # Help
 
