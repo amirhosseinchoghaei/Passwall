@@ -14,11 +14,11 @@ Done !
 ```
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
-📍in case you use a snapshot build
+📍in case you use a snapshot build.
 
 # Help
 
-- After installation settings will be change :
+- After installation , settings will be change :
  
 ⚠️ LAN IP ADDRESS : 192.168.27.1
 
