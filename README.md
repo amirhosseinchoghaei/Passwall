@@ -43,3 +43,7 @@ wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwal
 ⚡ IRAN IP & Domain Traffic Direct (100%)
 
 ⚡ Improve Performance
+
+⚠️ **IRANCELL❌**  **RIGHTEL❌** Internet Can't install Passwall Packages , Please Change your internet Like MCi (Hamrah Aval)✅ , TLC (Mokhabrat)✅ , Shatel✅ , ZiTel✅ , ...
+
+After Installation you can use IRANCELL & RIGHTEL for vpn connections. 📶
