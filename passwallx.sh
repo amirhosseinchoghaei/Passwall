@@ -141,11 +141,11 @@ uci set passwall.@global[0].udp_node='tcp'
 
 uci commit passwall
 
-
 uci set network.lan.proto='static'
 uci set network.lan.netmask='255.255.255.0'
 uci set network.lan.ipaddr='192.168.27.1'
 uci set network.lan.delegate='0'
+
 
 uci commit network
 
@@ -153,5 +153,6 @@ uci commit
 
 /sbin/reload_config
 
+/etc/init.d/network reload
 
 rm passwallx.sh
