@@ -76,7 +76,21 @@ unzip -o iam.zip -d /
 cd
 
 ########
+sleep 1
 
+RESULT=`ls /etc/init.d/passwall`
+
+if [ "$RESULT" == "/etc/init.d/passwall" ]; then
+
+echo -e "${GREEN} Done ! ${NC}"
+
+ else
+           
+echo -e "${RED} Passwall Not Installed ! Check your internet and try again ${NC}"
+
+exit 1
+
+fi
 
 ####install_xray
 opkg install xray-core
@@ -92,6 +106,10 @@ echo -e "${GREEN} Done ! ${NC}"
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
 fi
+
+
+
+
 
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
