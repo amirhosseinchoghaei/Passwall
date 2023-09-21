@@ -147,7 +147,6 @@ uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
 
-/sbin/reload_config
 
 uci set passwall.@global[0].tcp_proxy_mode='global'
 uci set passwall.@global[0].udp_proxy_mode='global'
@@ -160,7 +159,6 @@ uci set passwall.@global[0].udp_node='tcp'
 
 uci commit passwall
 
-/sbin/reload_config
 
 uci set network.lan.proto='static'
 uci set network.lan.netmask='255.255.255.0'
