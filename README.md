@@ -12,7 +12,7 @@ Done !
 
 # IF You are Using SNAPSHOT VERSION
 ```
-rm -f passwalls.sh wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
+rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
 📍in case you use a snapshot build.
 
