@@ -85,7 +85,7 @@ echo -e "${GREEN} Done ! ${NC}"
 
  else
            
-echo -e "${RED} Passwall Not Installed ! Check your internet and try again ${NC}"
+echo -e "${RED} Passwall Not Installed ! Change your internet ISP and try again ${NC}"
 
 rm passwallx.sh
 exit 1
