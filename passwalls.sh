@@ -100,11 +100,11 @@ RESULT=`ls /usr/bin/xray`
 
 if [ "$RESULT" == "/usr/bin/xray" ]; then
 
-echo -e "${GREEN} Done ! ${NC}"
+echo -e "${GREEN} Xray : OK ${NC}"
 
  else
            
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
 fi
 
