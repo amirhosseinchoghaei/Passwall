@@ -153,7 +153,6 @@ uci commit network
 
 
 uci delete wireless.radio0.disabled='1'
-uci delete wireless.default_radio0.disabled='1'
 uci set wireless.default_radio0.ssid='VPN 2G'
 uci set wireless.default_radio0.encryption='psk2+ccmp'
 uci set wireless.default_radio0.key='10203040'
