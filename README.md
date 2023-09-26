@@ -39,6 +39,8 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 ⚡ Improve Performance
 
+⚡ Server WARP Connection Fixed
+
 ⚠️ **IRANCELL❌**  **RIGHTEL❌** Internet Can't install Passwall Packages , Please Change your internet Like MCi (Hamrah Aval)✅ , TLC (Mokhabrat)✅ , Shatel✅ , ZiTel✅ , ...
 
 After Installation you can use IRANCELL & RIGHTEL for vpn connections. 📶✅
