@@ -109,6 +109,11 @@ rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchogha
 
 fi
 
+uci set system.@system[0].zonename='Asia/Tehran'
+
+uci set system.@system[0].timezone='<+0330>-3:30'
+
+uci commit system
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
 
