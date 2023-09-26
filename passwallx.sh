@@ -36,11 +36,11 @@ done
 ### Install package ###
 
 opkg update
-
+sleep 3
 opkg install luci-app-passwall
-
+sleep 3
 opkg remove dnsmasq
-
+sleep 3
 opkg install ipset
 sleep 2
 opkg install ipt2socks
