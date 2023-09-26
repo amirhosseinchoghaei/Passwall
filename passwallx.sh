@@ -114,10 +114,6 @@ echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
 
 echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
-echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
-
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
-
 echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
 
 echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
@@ -150,15 +146,6 @@ uci set network.lan.delegate='0'
 uci commit network
 
 
-uci delete wireless.radio1.disabled='1'
-uci delete wireless.default_radio1.disabled='1'
-uci set wireless.default_radio1.ssid='VPN 5G'
-uci set wireless.default_radio1.encryption='psk2+ccmp'
-uci set wireless.default_radio1.key='10203040'
-uci set wireless.default_radio1.mode='ap'
-uci set wireless.default_radio1.network='lan'
-
-
 uci delete wireless.radio0.disabled='1'
 uci delete wireless.default_radio0.disabled='1'
 uci set wireless.default_radio0.ssid='VPN 2G'
@@ -174,8 +161,6 @@ uci commit
 echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
-echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
 echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
 sleep 5
