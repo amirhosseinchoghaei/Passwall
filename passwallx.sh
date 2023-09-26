@@ -112,20 +112,19 @@ fi
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
 
-echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
 
-echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
 
-echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds -  IP ADDRESS AND WIFI NAME **${ENDCOLOR}"
+echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
 
 echo -e "${MAGENTA} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
 
 sleep 10
-
 
 uci set system.@system[0].hostname=By-AmirHossein
 
@@ -171,6 +170,15 @@ uci set wireless.default_radio0.network='lan'
 uci commit wireless
 
 uci commit
+
+echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
+
+echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
+echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
+echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
+echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
+
+sleep 5
 
 reboot
 
