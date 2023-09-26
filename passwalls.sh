@@ -109,8 +109,11 @@ rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchogha
 fi
 
 
+uci set system.@system[0].zonename='Asia/Tehran'
 
+uci set system.@system[0].timezone='<+0330>-3:30'
 
+uci commit system
 
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
@@ -118,65 +121,58 @@ echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 
-echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
+echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
 
 echo -e "${MAGENTA} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
 
-sleep 7
-
-uci delete wireless.radio1.disabled='1'
-uci delete wireless.default_radio1.disabled='1'
-uci set wireless.default_radio1.ssid='VPN 5G'
-uci set wireless.default_radio1.encryption='psk2+ccmp'
-uci set wireless.default_radio1.key='10203040'
-uci set wireless.default_radio1.mode='ap'
-uci set wireless.default_radio1.network='lan'
-
+sleep 10
 
 uci delete wireless.radio0.disabled='1'
-uci delete wireless.default_radio0.disabled='1'
 uci set wireless.default_radio0.ssid='VPN 2G'
 uci set wireless.default_radio0.encryption='psk2+ccmp'
 uci set wireless.default_radio0.key='10203040'
 uci set wireless.default_radio0.mode='ap'
 uci set wireless.default_radio0.network='lan'
 
-
 uci commit wireless
-
-wifi
 
 uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
 
-
 uci set passwall.@global[0].tcp_proxy_mode='global'
 uci set passwall.@global[0].udp_proxy_mode='global'
-uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
 uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
 uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
 uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
 uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
+uci set passwall.@global[0].remote_dns='8.8.4.4'
+uci set passwall.@global[0].dns_mode='udp'
 uci set passwall.@global[0].udp_node='tcp'
 
 uci commit passwall
-
 
 uci set network.lan.proto='static'
 uci set network.lan.netmask='255.255.255.0'
 uci set network.lan.ipaddr='192.168.27.1'
 uci set network.lan.delegate='0'
 
-
 uci commit network
 
 uci commit
 
-/sbin/reload_config
+echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
 
-/etc/init.d/network reload
+echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
+
+echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
+
+sleep 5
+
+reboot
 
 rm passwalls.sh
 
-reboot
+/sbin/reload_config
+
+/etc/init.d/network reload
