@@ -111,15 +111,45 @@ fi
 
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
+
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
+
 echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
+
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
 
+echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds -  IP ADDRESS AND WIFI NAME **${ENDCOLOR}"
+
 echo -e "${MAGENTA} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
 
-sleep 7
+sleep 10
+
+
+uci set system.@system[0].hostname=By-AmirHossein
+
+uci commit system
+
+uci set passwall.@global[0].tcp_proxy_mode='global'
+uci set passwall.@global[0].udp_proxy_mode='global'
+uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
+uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
+uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
+uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
+uci set passwall.@global[0].udp_node='tcp'
+
+uci commit passwall
+
+uci set network.lan.proto='static'
+uci set network.lan.netmask='255.255.255.0'
+uci set network.lan.ipaddr='192.168.27.1'
+uci set network.lan.delegate='0'
+
+
+uci commit network
+
 
 uci delete wireless.radio1.disabled='1'
 uci delete wireless.default_radio1.disabled='1'
@@ -138,43 +168,14 @@ uci set wireless.default_radio0.key='10203040'
 uci set wireless.default_radio0.mode='ap'
 uci set wireless.default_radio0.network='lan'
 
-
 uci commit wireless
 
-wifi
-
-uci set system.@system[0].hostname=By-AmirHossein
-
-uci commit system
-
-
-uci set passwall.@global[0].tcp_proxy_mode='global'
-uci set passwall.@global[0].udp_proxy_mode='global'
-uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
-uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
-uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
-uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
-uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
-uci set passwall.@global[0].udp_node='tcp'
-
-uci commit passwall
-
-
-uci set network.lan.proto='static'
-uci set network.lan.netmask='255.255.255.0'
-uci set network.lan.ipaddr='192.168.27.1'
-uci set network.lan.delegate='0'
-
-
-uci commit network
-
 uci commit
+
+reboot
+
+rm passwallx.sh
 
 /sbin/reload_config
 
 /etc/init.d/network reload
-
-rm passwallx.sh
-
-reboot
-
