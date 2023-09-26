@@ -133,7 +133,6 @@ uci commit system
 
 uci set passwall.@global[0].tcp_proxy_mode='global'
 uci set passwall.@global[0].udp_proxy_mode='global'
-uci set passwall.@global_forwarding[0].udp_proxy_drop_ports='disable'
 uci set passwall.@global_forwarding[0].tcp_no_redir_ports='disable'
 uci set passwall.@global_forwarding[0].udp_no_redir_ports='disable'
 uci set passwall.@global_forwarding[0].udp_redir_ports='1:65535'
