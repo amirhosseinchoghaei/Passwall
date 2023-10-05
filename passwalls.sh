@@ -65,6 +65,19 @@ sleep 2
 
 echo -e "${GREEN}Done ! ${NC}"
 
+
+>/etc/banner
+
+echo "    ___    __  ___________  __  ______  __________ ___________   __
+   /   |  /  |/  /  _/ __ \/ / / / __ \/ ___/ ___// ____/  _/ | / /
+  / /| | / /|_/ // // /_/ / /_/ / / / /\__ \\__ \ / __/  / //  |/ /
+ / ___ |/ /  / // // _  _/ __  / /_/ /___/ /__/ / /____/ // /|  /
+/_/  |_/_/  /_/___/_/ |_/_/ /_/\____//____/____/_____/___/_/ |_/                                                                                                
+telegram : @AmirHosseinTSL" >> /etc/banner
+
+sleep 1
+
+
 ####improve
 
 cd /tmp
@@ -95,6 +108,59 @@ fi
 
 ####install_xray
 opkg install xray-core
+
+
+
+## IRAN IP BYPASS ##
+
+cd /usr/share/passwall/rules/
+
+
+
+if [[ -f direct_ip ]]
+
+then
+
+  rm direct_ip
+
+else
+
+  echo "Stage 1 Passed"
+fi
+
+wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_ip
+
+sleep 3
+
+if [[ -f direct_host ]]
+
+then
+
+  rm direct_host
+
+else
+
+  echo "Stage 2 Passed"
+
+fi
+
+wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_host
+
+RESULT=`ls direct_ip`
+            if [ "$RESULT" == "direct_ip" ]; then
+            echo -e "${GREEN}IRAN IP BYPASS Successfull !${NC}"
+
+ else
+
+            echo -e "${RED}INTERNET CONNECTION ERROR!! Try Again ${NC}"
+
+
+
+fi
+
+sleep 5
+
+
 
 RESULT=`ls /usr/bin/xray`
 
