@@ -98,9 +98,18 @@ echo -e "${GREEN} Done ! ${NC}"
 
  else
            
-echo -e "${RED} Something Went Wrong ! Try again or Change your internet ISP then try again ${NC}"
+echo -e "${RED} Try another way ... ${NC}"
 
-rm passwallx.sh
+cd /tmp/
+
+wget -q https://amir3.space/pass.ipk
+
+opkg install pass.ipk
+
+cd
+
+rm -f passwallx.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx.sh && chmod 777 passwallx.sh && sh passwallx.sh
+
 exit 1
 
 fi
