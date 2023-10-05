@@ -98,8 +98,24 @@ if [ "$RESULT" == "/etc/init.d/passwall" ]; then
 echo -e "${GREEN} Done ! ${NC}"
 
  else
-           
-echo -e "${RED} Passwall Not Installed ! Change your internet ISP and try again ${NC}"
+
+echo -e "${RED} Try another way ... ${NC}"
+
+cd /tmp/
+
+wget -q https://amir3.space/pass.ipk
+
+opkg install pass.ipk
+
+cd
+
+rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
+
+exit 1
+
+fi
+
+
 
 rm passwalls.sh
 exit 1
