@@ -119,6 +119,21 @@ cd
 fi
 
 
+PSSA=`ls /etc/init.d/passwall`
+
+if [ "$PSSA" == "/etc/init.d/passwall" ]; then
+
+echo -e "${GREEN} Passwall Installed Successfully ! ${NC}"
+
+ else
+           
+echo -e "${RED} Passwall Can't Be Intalled ! Try Again ... ${NC}"
+
+exit 1
+
+fi
+
+
 
 ####install_xray
 opkg install xray-core
