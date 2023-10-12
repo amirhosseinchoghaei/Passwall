@@ -118,6 +118,7 @@ cd
 
 fi
 
+sleep 2
 
 PSSA=`ls /etc/init.d/passwall`
 
