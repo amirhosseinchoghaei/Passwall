@@ -40,7 +40,7 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 ⚡ Full Automatic installation Packages Just in one step
 
-⚡ Install XRAY On Temp Space if you dont have Enough Disk Space (Smart)
+⚡ Install XRAY On Temp Space if You Don't Have Enough Disk Space (Smart)
 
 ⚡ IRAN IP & Domain Traffic Direct (100%)
 
