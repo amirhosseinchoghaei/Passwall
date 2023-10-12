@@ -4,6 +4,13 @@
 
 ![This is an image](https://pars-space.ir/wp-content/uploads/2023/09/v2ray-openwrt.jpg)
 
+# System Requirements :
+
+- CPU : + 700 MHz ✅
+
+- RAM : + 128 MB  ✅
+
+
 # INSTALL PASSWALL : Run this command in openwrt remote ssh
 ```
 rm -f passwallx.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx.sh && chmod 777 passwallx.sh && sh passwallx.sh
