@@ -14,6 +14,14 @@ echo "Running as root..."
 sleep 2
 clear
 
+uci set system.@system[0].zonename='Asia/Tehran'
+
+uci set system.@system[0].timezone='<+0330>-3:30'
+
+uci commit system
+
+/sbin/reload_config
+
 ### Update Packages ###
 
 opkg update
