@@ -6,9 +6,9 @@
 
 # System Requirements :
 
-- CPU : + 700 MHz ✅
+- CPU : +700 MHz ✅
 
-- RAM : + 128 MB  ✅
+- RAM : +128 MB  ✅
 
 
 # INSTALL PASSWALL : Run this command in openwrt remote ssh
