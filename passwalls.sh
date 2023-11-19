@@ -213,7 +213,7 @@ echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
 
-echo -e "${MAGENTA} Made With Love By : AmirHossein Choghaei ${ENDCOLOR}"
+echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
 
 sleep 10
 
