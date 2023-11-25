@@ -4,6 +4,10 @@
 
 ![This is an image](https://pars-space.ir/wp-content/uploads/2023/09/v2ray-openwrt.jpg)
 
+# ❌ DO NOT INSTALL ON OPENWRT 23.05
+# ✅ Recommended Version : 22.03.5 > https://downloads.openwrt.org/releases/22.03.5/targets/
+
+
 # System Requirements :
 
 - CPU : +700 MHz ✅
