@@ -51,9 +51,6 @@ done
 
 else
 
-
-else
-
 echo -e "${GREEN} Version : Currect. ${GREEN}"
 
 fi
