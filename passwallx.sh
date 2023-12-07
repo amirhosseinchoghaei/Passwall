@@ -49,6 +49,7 @@ while true; do
     esac
 done
 
+exit 1
 else
 
 echo -e "${GREEN} Version : Currect. ${GREEN}"
