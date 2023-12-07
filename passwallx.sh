@@ -22,6 +22,46 @@ uci commit system
 
 /sbin/reload_config
 
+
+##Scanning
+
+. /etc/openwrt_release
+
+echo "OPENWRT VERSION: $DISTRIB_RELEASE"
+
+RESULT=`echo "$DISTRIB_RELEASE" | grep -o 23 | sed -n '1p'`
+
+if [ "$RESULT" == "23" ]; then
+
+echo -e "${YELLOW} You are Running Openwrt Version 23. ! ${YELLOW}"
+sleep 2
+echo -e "${YELLOW} IF You Want to install Orginal Passwall you need downgrade to openwrt 22.03  ${YELLOW}"
+sleep 2
+echo -e "${YELLOW} At this momment You can just install Passwall 2 ${YELLOW}"
+sleep 2
+
+while true; do
+    read -p "Do you wish to install Passwall 2 (y or n )? " yn
+    case $yn in
+        [Yy]* ) rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+else
+
+
+else
+
+echo -e "${GREEN} Version : Currect. ${GREEN}"
+
+fi
+
+
+
+
+
 ### Update Packages ###
 
 opkg update
