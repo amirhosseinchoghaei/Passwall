@@ -41,10 +41,10 @@ echo -e "${YELLOW} At this momment You can just install Passwall 2 ${YELLOW}"
 sleep 2
 
 while true; do
-    read -p "Do you wish to install Passwall 2 (y or n )? " yn
+    read -p "Do you wish to install Passwall 2 (y or n)? " yn
     case $yn in
         [Yy]* ) rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh;;
-        [Nn]* ) exit;;
+        [Nn]* ) echo -e "${MAGENTA} BYE ;) ${MAGENTA}" & exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
