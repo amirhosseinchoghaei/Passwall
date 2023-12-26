@@ -54,3 +54,5 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 ⚡ Server WARP Connection Fixed
 
+⚡ Default Kill Switch
+
