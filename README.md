@@ -40,7 +40,7 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 🔑 Password : 10203040
 
 
-✅ Tested On : Xiaomi 4a Gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v2 , Linksys ea8100 v1 , ASUS RT-N66U
+✅ Tested On : Xiaomi 4a Gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v1-v2 , Linksys ea8100 v1 , ASUS RT-N66U
 
 # Features
 
