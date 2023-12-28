@@ -39,7 +39,7 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 🔑 Password : 10203040
 
-Types Support :
+# Types Support
 
 VLESS (XRAY ✅ SING-BOX ✅)
 
