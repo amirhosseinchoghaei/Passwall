@@ -39,8 +39,30 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 🔑 Password : 10203040
 
+Types Support :
 
-✅ Tested On : Xiaomi 4a Gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v1-v2 , Linksys ea8100 v1 , ASUS RT-N66U
+VLESS (XRAY ✅ SING-BOX ✅)
+
+VMESS (XRAY ✅ SING-BOX ✅)
+
+REALITY (XRAY ✅ SING-BOX ✅)
+
+TROJAN (XRAY ✅ SING-BOX ✅)
+
+HYSTERIA2 (XRAY ❌ SING-BOX ✅)
+
+TUC (XRAY ❌ SING-BOX ✅)
+
+SHADOWSOCKS (XRAY ✅ SING-BOX ✅)
+
+WIREGUARD (XRAY ✅ SING-BOX ✅)
+
+SOCKS (XRAY ✅ SING-BOX ✅)
+
+HTTP (XRAY ✅ SING-BOX ✅)
+
+
+✅ Tested On : Xiaomi 4a Gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v1-v2 , Linksys ea8100 v1-v2 , ASUS RT-N66U
 
 # Features
 
