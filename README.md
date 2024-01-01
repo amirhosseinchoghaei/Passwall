@@ -3,7 +3,13 @@
 # How to install Passwall + Xray on openwrt
 
 
-# ✅ Recommended Version : 22.03.5 > https://downloads.openwrt.org/releases/22.03.5/targets/
+# ✅ Recommended Openwrt Version : 22.03.5
+
+ 22.03.5 > https://downloads.openwrt.org/releases/22.03.5/targets/
+
+* [Xiaomi 4a Gigabit openwrt 22.03.3 Recommended](https://archive.openwrt.org/releases/22.03.3/targets/ramips/mt7621/openwrt-22.03.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin)
+  
+* when you want downgrade openwrt please Uncheck ( Keep setting ) . it's for clear installation .
 
 ![This is an image](https://pars-space.ir/wp-content/uploads/2023/09/v2ray-openwrt.jpg)
 
