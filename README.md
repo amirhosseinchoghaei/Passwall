@@ -7,7 +7,7 @@
 
  22.03.5 > https://downloads.openwrt.org/releases/22.03.5/targets/
 
-* [Xiaomi 4a Gigabit openwrt 22.03.3 Recommended](https://archive.openwrt.org/releases/22.03.3/targets/ramips/mt7621/openwrt-22.03.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin)
+* [IF you have Xiaomi 4a Gigabit , Openwrt 22.03.3 Recommended](https://archive.openwrt.org/releases/22.03.3/targets/ramips/mt7621/openwrt-22.03.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin)
   
 * when you want downgrade openwrt please Uncheck ( Keep setting ) . it's for clear installation .
 
