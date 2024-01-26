@@ -249,6 +249,8 @@ uci set network.lan.delegate='0'
 
 uci commit network
 
+dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir' 'my.irancell.ir'
+
 uci commit
 
 echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
