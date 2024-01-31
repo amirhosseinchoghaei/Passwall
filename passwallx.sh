@@ -52,7 +52,7 @@ done
 exit 1
 else
 
-echo -e "${GREEN} Version : Currect. ${GREEN}"
+echo -e "${GREEN} Version : Correct. ${GREEN}"
 
 fi
 
