@@ -72,6 +72,15 @@ opkg install kmod-ipt-nat
 sleep 2
 opkg install dnsmasq-full
 sleep 2
+opkg install ca-bundle
+sleep 1
+opkg install kmod-inet-diag
+sleep 1
+opkg install kernel
+sleep 1
+opkg install kmod-netlink-diag
+sleep 1
+opkg install kmod-tun
 
 echo -e "${GREEN}Done ! ${NC}"
 
