@@ -149,33 +149,19 @@ RESULT=`ls /etc/init.d/passwall`
 
 if [ "$RESULT" == "/etc/init.d/passwall" ]; then
 
-echo -e "${GREEN} Done ! ${NC}"
+echo -e "${GREEN} Passwall Installed successfully ! ${NC}"
 
  else
            
-echo -e "${RED} Try another way ... ${NC}"
-
-cd /tmp/
-
-wget -q https://amir3.space/pass.ipk
-
-opkg install pass.ipk
-
-cd
-
-wget -q https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx2.sh && chmod 777 passwallx2.sh && sh passwallx2.sh
+echo -e "${RED} Can not Download Packages ... Check your internet Connection . ${NC}"
 
 exit 1
 
 fi
 
 
-
 ####install_xray
 opkg install xray-core
-
-
-
 
 ## IRAN IP BYPASS ##
 
