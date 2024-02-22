@@ -233,6 +233,8 @@ reboot
 
 rm passwall2x.sh
 
+rm passwallx.sh
+
 /sbin/reload_config
 
 /etc/init.d/network reload
