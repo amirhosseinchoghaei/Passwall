@@ -15,7 +15,7 @@
 
 - CPU : +700 MHz ✅
 
-- RAM : +128 MB  ✅
+- RAM : +256 MB  ✅
 
 
 # INSTALL PASSWALL : Run this command in openwrt remote ssh
