@@ -159,6 +159,8 @@ geoip:ir'
 uci set passwall2.Direct.domain_list='regexp:^.+\.ir$
 geosite:category-ir'
 
+uci set passwall2.myshunt.Direct='_direct'
+
 uci commit passwall2
 
 uci set system.@system[0].zonename='Asia/Tehran'
