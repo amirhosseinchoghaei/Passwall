@@ -46,7 +46,7 @@ done
 
 opkg update
 
-echo -e "${GREEN} INSTALLING PASSWALL2 FOR SNAPSHOT. ${NC}"
+echo -e "${GREEN} INSTALLING PASSWALL.2 FOR SNAPSHOT . ${NC}"
 
 opkg install luci-app-passwall2
 
@@ -92,11 +92,11 @@ RESULT=`ls /etc/init.d/passwall2`
 
 if [ "$RESULT" == "/etc/init.d/passwall2" ]; then
 
-echo -e "${GREEN} Passwall Installed Successfully ! ${NC}"
+echo -e "${GREEN} Passwall.2 Installed Successfully ! ${NC}"
 
  else
 
- echo -e "${RED} Can not Download Packages ... Check your internet Connection. ${NC}"
+ echo -e "${RED} Can not Download Packages ... Check your internet Connection . ${NC}"
 
  exit 1
 
