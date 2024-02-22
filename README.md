@@ -29,7 +29,7 @@ rm -f passwallx.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 ```
 Done !
 
-# IF You are Using SNAPSHOT VERSION
+# IF You are Using SNAPSHOT 👈
 ```
 rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
@@ -66,6 +66,12 @@ WIREGUARD (XRAY ✅ SING-BOX ✅)
 SOCKS (XRAY ✅ SING-BOX ✅)
 
 HTTP (XRAY ✅ SING-BOX ✅)
+
+XRAY Fragment tlshello & 1-3 ✅
+
+↘️
+Recommended Router : [Xiaomi ax3000t](https://openwrt.org/inbox/toh/xiaomi/ax3000t)
+
 
 
 ✅ Tested On : Xiaomi 4a Gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v1-v2 , Linksys ea8100 v1-v2 , ASUS RT-N66U , Xiaomi AX3600 , Xiomi AX3200 , Xiaomi AX6000 , Xiaomi AX3000T
