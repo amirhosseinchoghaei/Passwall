@@ -88,8 +88,6 @@ sleep 2
 opkg install boost 
 
 
-
-
 >/etc/banner
 
 echo "    ___    __  ___________  __  ______  __________ ___________   __
@@ -102,6 +100,22 @@ telegram : @AmirHosseinTSL" >> /etc/banner
 sleep 1
 
 
+RESULT5=`ls /etc/init.d/passwall2`
+
+if [ "$RESULT5" == "/etc/init.d/passwall2" ]; then
+
+echo -e "${GREEN} Passwall.2 Installed Successfully ! ${NC}"
+
+ else
+
+ echo -e "${RED} Can not Download Packages ... Check your internet Connection . ${NC}"
+
+ exit 1
+
+fi
+
+
+
 ####install_xray
 opkg install xray-core
 
@@ -111,10 +125,18 @@ RESULT=`ls /usr/bin/xray`
 
 if [ "$RESULT" == "/usr/bin/xray" ]; then
 
-echo -e "${GREEN} Done ! ${NC}"
+echo -e "${GREEN} XRAY : OK ! ${NC}"
 
  else
-           
+
+ echo -e "${YELLOW} XRAY : NOT INSTALLED X ${NC}"
+
+ sleep 2
+ 
+ echo -e "${YELLOW} Trying to install Xray on temp Space ... ${NC}"
+
+ sleep 2
+  
 rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
 fi
@@ -164,6 +186,8 @@ ff00::/8
 geoip:ir'
 uci set passwall2.Direct.domain_list='regexp:^.+\.ir$
 geosite:category-ir'
+
+uci set passwall2.myshunt.Direct='_direct'
 
 uci commit passwall2
 
