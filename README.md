@@ -18,7 +18,9 @@
 - RAM : +256 MB  ✅
 
 
-# INSTALL PASSWALL : Run this command in openwrt remote ssh
+# INSTALL PASSWALL : 
+
+Run this command in openwrt remote ssh
 ```
 rm -f passwallx.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx.sh && chmod 777 passwallx.sh && sh passwallx.sh
 ```
@@ -65,7 +67,7 @@ HTTP (XRAY ✅ SING-BOX ✅)
 XRAY Fragment tlshello & 1-3 ✅
 
 ↘️
-Recommended Router : [Xiaomi ax3000t](https://openwrt.org/inbox/toh/xiaomi/ax3000t)
+Recommended Router : [Xiaomi AX3000T](https://openwrt.org/inbox/toh/xiaomi/ax3000t)
 
 
 
