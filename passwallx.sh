@@ -8,8 +8,6 @@ CYAN='\033[0;36m'
 GRAY='\033[0;37m'
 NC='\033[0m' # No Color
 
-
-
 echo "Running as root..."
 sleep 2
 clear
@@ -33,9 +31,7 @@ RESULT=`echo "$DISTRIB_RELEASE" | grep -o 23 | sed -n '1p'`
 
 if [ "$RESULT" == "23" ]; then
 
-echo -e "${YELLOW} You are Running Openwrt Version 23. ! ${YELLOW}"
-sleep 2
-echo -e "${YELLOW} IF You Want to install Orginal Passwall you need downgrade to openwrt 22.03  ${YELLOW}"
+echo -e "${YELLOW} You are Running Openwrt Version 23.x.x ! ${YELLOW}"
 sleep 2
 echo -e "${YELLOW} At this momment You can just install Passwall 2 ${YELLOW}"
 sleep 2
@@ -55,10 +51,6 @@ else
 echo -e "${GREEN} Version : Correct. ${GREEN}"
 
 fi
-
-
-
-
 
 ### Update Packages ###
 
@@ -127,9 +119,6 @@ opkg install libstdcpp6
 sleep 2
 opkg install boost 
 
-
-
-
 >/etc/banner
 
 echo "    ___    __  ___________  __  ______  __________ ___________   __
@@ -140,7 +129,6 @@ echo "    ___    __  ___________  __  ______  __________ ___________   __
 telegram : @AmirHosseinTSL" >> /etc/banner
 
 sleep 1
-
 
 
 ####improve
