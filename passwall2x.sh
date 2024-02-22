@@ -231,7 +231,7 @@ sleep 5
 
 reboot
 
-rm passwallx.sh
+rm passwall2x.sh
 
 /sbin/reload_config
 
