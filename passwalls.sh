@@ -46,6 +46,8 @@ done
 
 opkg update
 
+echo -e "${GREEN} INSTALLING PASSWALL2 FOR SNAPSHOT. ${NC}"
+
 opkg install luci-app-passwall2
 
 opkg remove dnsmasq
