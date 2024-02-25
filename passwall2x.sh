@@ -216,7 +216,11 @@ uci set wireless.default_radio0.network='lan'
 
 uci commit wireless
 
-dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir' 'my.irancell.ir'
+uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
+my.irancell.ir'
+
+
+uci commit
 
 uci commit
 
