@@ -49,9 +49,11 @@ opkg update
 echo -e "${GREEN} INSTALLING PASSWALL.2 FOR SNAPSHOT . ${NC}"
 
 opkg install luci-app-passwall2
-
+sleep 3
 opkg remove dnsmasq
-
+sleep 3
+opkg install dnsmasq-full
+sleep 2
 opkg install ipset
 sleep 2
 opkg install ipt2socks
@@ -69,8 +71,6 @@ sleep 2
 opkg install iptables-mod-tproxy
 sleep 2
 opkg install kmod-ipt-nat
-sleep 2
-opkg install dnsmasq-full
 sleep 2
 opkg install ca-bundle
 sleep 1
