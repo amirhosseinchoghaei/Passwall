@@ -47,25 +47,11 @@ opkg install luci-app-passwall2
 sleep 3
 opkg remove dnsmasq
 sleep 3
-opkg install ipset
-sleep 2
-opkg install ipt2socks
-sleep 2
-opkg install iptables
-sleep 2
-opkg install iptables-legacy
-sleep 2
-opkg install iptables-mod-conntrack-extra
-sleep 2
-opkg install iptables-mod-iprange
-sleep 2
-opkg install iptables-mod-socket
-sleep 2
-opkg install iptables-mod-tproxy
-sleep 2
-opkg install kmod-ipt-nat
-sleep 2
 opkg install dnsmasq-full
+sleep 2
+opkg install kmod-nft-socket
+sleep 2
+opkg install kmod-nft-tproxy
 sleep 2
 opkg install ca-bundle
 sleep 1
