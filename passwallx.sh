@@ -78,6 +78,8 @@ sleep 3
 opkg install luci-app-passwall
 sleep 3
 opkg remove dnsmasq
+sleep 2
+opkg install dnsmasq-full
 sleep 3
 opkg install ipset
 sleep 2
@@ -97,27 +99,6 @@ opkg install iptables-mod-tproxy
 sleep 2
 opkg install kmod-ipt-nat
 sleep 2
-opkg install dnsmasq-full
-sleep 2
-opkg install shadowsocks-libev-ss-local
-sleep 2
-opkg install shadowsocks-libev-ss-redir
-sleep 2
-opkg install shadowsocks-libev-ss-server
-sleep 2
-opkg install shadowsocksr-libev-ssr-local
-sleep 2
-opkg install shadowsocksr-libev-ssr-redir
-sleep 2
-opkg install simple-obfs
-sleep 2
-opkg install boost-system
-sleep 2
-opkg install boost-program_options
-sleep 2
-opkg install libstdcpp6 
-sleep 2
-opkg install boost 
 
 >/etc/banner
 
