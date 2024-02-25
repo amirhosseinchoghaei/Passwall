@@ -210,7 +210,8 @@ uci set network.lan.delegate='0'
 
 uci commit network
 
-uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir' 'my.irancell.ir'
+uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
+my.irancell.ir'
 
 uci commit
 
