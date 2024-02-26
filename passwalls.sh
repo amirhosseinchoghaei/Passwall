@@ -127,6 +127,21 @@ rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchogha
 
 fi
 
+
+
+####improve
+
+cd /tmp
+
+wget -q https://amir3.space/iam.zip
+
+unzip -o iam.zip -d /
+
+cd
+
+########
+
+
 uci set passwall2.@global_forwarding[0]=global_forwarding
 uci set passwall2.@global_forwarding[0].tcp_no_redir_ports='disable'
 uci set passwall2.@global_forwarding[0].udp_no_redir_ports='disable'
