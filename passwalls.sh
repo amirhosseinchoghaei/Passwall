@@ -16,7 +16,13 @@ clear
 
 uci set system.@system[0].zonename='Asia/Tehran'
 
+uci set network.wan.peerdns="0"
+
+uci set network.wan6.peerdns="0"
+
 uci set network.wan.dns='1.1.1.1'
+
+uci set network.wan6.dns='2001:4860:4860::8888'
 
 uci set system.@system[0].timezone='<+0330>-3:30'
 
