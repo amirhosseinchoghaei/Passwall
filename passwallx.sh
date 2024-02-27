@@ -246,6 +246,7 @@ uci set passwall.@global_forwarding[0].tcp_redir_ports='1:65535'
 uci set passwall.@global[0].remote_dns='8.8.4.4'
 uci set passwall.@global[0].dns_mode='udp'
 uci set passwall.@global[0].udp_node='tcp'
+uci set passwall.@global[0].remote_dns='8.8.4.4'
 
 uci commit passwall
 
