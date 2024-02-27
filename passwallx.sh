@@ -14,9 +14,15 @@ clear
 
 uci set system.@system[0].zonename='Asia/Tehran'
 
+uci set network.wan.dns='1.1.1.1'
+
 uci set system.@system[0].timezone='<+0330>-3:30'
 
 uci commit system
+
+uci commit network
+
+uci commit
 
 /sbin/reload_config
 
