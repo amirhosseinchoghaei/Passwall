@@ -111,9 +111,9 @@ opkg install iptables-mod-tproxy
 sleep 2
 opkg install kmod-ipt-nat
 sleep 2
-kmod-nft-socket
+opkg install kmod-nft-socket
 sleep 2
-kmod-nft-tproxy
+opkg install kmod-nft-tproxy
 sleep 2
 
 >/etc/banner
