@@ -258,6 +258,8 @@ uci set passwall.@global[0].dns_mode='udp'
 uci set passwall.@global[0].udp_node='tcp'
 uci set passwall.@global[0].remote_dns='8.8.4.4'
 uci set passwall.@global[0].chn_list='0'
+uci set passwall.@global[0].tcp_proxy_mode='proxy'
+uci set passwall.@global[0].udp_proxy_mode='proxy'
 
 uci commit passwall
 
