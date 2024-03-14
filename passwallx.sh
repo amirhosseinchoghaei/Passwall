@@ -52,7 +52,7 @@ echo ""
 
 
 echo " "
- read -p " -Select Passwall Version : 1 or 2 " choice
+ read -p " -Select Passwall Version : " choice
 
     case $choice in
 
