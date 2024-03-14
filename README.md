@@ -64,8 +64,6 @@ SOCKS (XRAY ✅ SING-BOX ✅)
 
 HTTP (XRAY ✅ SING-BOX ✅)
 
-XRAY Fragment tlshello & 1-3 ✅
-
 
 
 ⭐Recommended Router : [Xiaomi AX3000T](https://openwrt.org/inbox/toh/xiaomi/ax3000t)
@@ -87,4 +85,6 @@ XRAY Fragment tlshello & 1-3 ✅
 ⚡ Server WARP Connection Fixed
 
 ⚡ Default Kill Switch
+
+⚡ XRAY Fragment tlshello | 1-3
 
