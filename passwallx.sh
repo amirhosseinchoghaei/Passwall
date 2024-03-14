@@ -37,6 +37,14 @@ uci commit
 
 . /etc/openwrt_release
 
+echo -e "${YELLOW} 
+ _____ _____ _____ _____ _ _ _ _____ __    __    
+|  _  |  _  |   __|   __| | | |  _  |  |  |  |   
+|   __|     |__   |__   | | | |     |  |__|  |__ 
+|__|  |__|__|_____|_____|_____|__|__|_____|_____|
+                                                
+${NC}"
+
 echo "OPENWRT VERSION: $DISTRIB_RELEASE"
 
 # RESULT=`echo "$DISTRIB_RELEASE" | grep -o 23 | sed -n '1p'`
