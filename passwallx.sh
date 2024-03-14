@@ -43,11 +43,6 @@ echo "OPENWRT VERSION: $DISTRIB_RELEASE"
 
 # if [ "$RESULT" == "23" ]; then
 
-echo -e "${YELLOW}  ${YELLOW}"
-sleep 2
-
-
-
 
 echo " "
 echo -e "${YELLOW} 1.${NC} ${CYAN} Passwall 1 ${NC}"
