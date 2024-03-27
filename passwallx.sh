@@ -44,10 +44,10 @@ echo -e "${YELLOW}
 |__|  |__|__|_____|_____|_____|__|__|_____|_____|
                                                 
 ${NC}"
-
-cat /tmp/sysinfo/model
-echo " -System VERSION : $DISTRIB_RELEASE"
-echo " -System Architecture : $DISTRIB_ARCH"
+EPOL="cat /tmp/sysinfo/model"
+echo " - Model : $EPOL"
+echo " - System Ver : $DISTRIB_RELEASE"
+echo " - System Arch : $DISTRIB_ARCH"
 
 # RESULT=`echo "$DISTRIB_RELEASE" | grep -o 23 | sed -n '1p'`
 
