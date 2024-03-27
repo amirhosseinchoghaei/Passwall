@@ -45,9 +45,9 @@ echo -e "${YELLOW}
                                                 
 ${NC}"
 
-echo "System VERSION : $DISTRIB_RELEASE"
+echo " -System VERSION : $DISTRIB_RELEASE"
 
-echo "System Architecture : $DISTRIB_ARCH"
+echo " -System Architecture : $DISTRIB_ARCH"
 
 # RESULT=`echo "$DISTRIB_RELEASE" | grep -o 23 | sed -n '1p'`
 
