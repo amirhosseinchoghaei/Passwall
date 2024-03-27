@@ -47,6 +47,8 @@ ${NC}"
 
 echo "OPENWRT VERSION: $DISTRIB_RELEASE"
 
+echo "OPENWRT VERSION: $DISTRIB_ARCH"
+
 # RESULT=`echo "$DISTRIB_RELEASE" | grep -o 23 | sed -n '1p'`
 
 # if [ "$RESULT" == "23" ]; then
