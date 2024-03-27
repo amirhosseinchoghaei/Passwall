@@ -44,7 +44,7 @@ echo -e "${YELLOW}
 |__|  |__|__|_____|_____|_____|__|__|_____|_____|
                                                 
 ${NC}"
-EPOL="cat /tmp/sysinfo/model"
+EPOL=`cat /tmp/sysinfo/model`
 echo " - Model : $EPOL"
 echo " - System Ver : $DISTRIB_RELEASE"
 echo " - System Arch : $DISTRIB_ARCH"
