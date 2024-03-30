@@ -57,6 +57,7 @@ echo " - System Arch : $DISTRIB_ARCH"
 echo " "
 echo -e "${YELLOW} 1.${NC} ${CYAN} Passwall 1 ${NC}"
 echo -e "${YELLOW} 2.${NC} ${CYAN} Passwall 2 ${NC}"
+echo -e "${YELLOW} 3.${NC} ${YELLOW} CloudFlare IP Scanner ${NC}"
 echo -e "${YELLOW} 4.${NC} ${RED} EXIT ${NC}"
 echo ""
 
@@ -90,7 +91,7 @@ rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghae
 
 3)
         
-echo "CloudFlare IP SCAN"
+echo "Installing CloudFlare IP SCAN ..."
 
 opkg update
 
