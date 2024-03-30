@@ -88,6 +88,20 @@ rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghae
  
 ;;
 
+3)
+        
+echo "CloudFlare IP SCAN"
+
+opkg update
+
+opkg install bash
+
+curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && bash cdnopw.sh
+ 
+;;
+
+
+
 4)
             echo ""
             echo -e "${GREEN}Exiting...${NC}"
