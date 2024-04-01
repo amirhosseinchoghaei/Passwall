@@ -1,13 +1,8 @@
 # Passwall
 [![visitor badge](https://img.shields.io/badge/Chat%20on-Telegram-blue.svg)](https://t.me/AmirHosseinTSL) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-# How to install Passwall + Xray on openwrt
-
-* [IF you have Xiaomi 4a Gigabit , downgrade to Openwrt 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/ramips/mt7621/openwrt-22.03.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin)
-  
-* when you want downgrade openwrt please Uncheck ( Keep setting ) . it's for clear installation .
+# How to install Passwall + Xray & SingBox on openwrt
 
 ![This is an image](https://pars-space.ir/wp-content/uploads/2023/09/v2ray-openwrt.jpg)
-
 
 
 
