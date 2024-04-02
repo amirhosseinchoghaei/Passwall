@@ -56,7 +56,7 @@ echo " - System Arch : $DISTRIB_ARCH"
 
 echo " "
 RESULTT=`ls /etc/init.d/passwall`
-if [ "$RESULT" == "/etc/init.d/passwall" ]; then
+if [ "$RESULTT" == "/etc/init.d/passwall" ]; then
 
 echo -e "${YELLOW} 4.${NC} ${GREEN} Update Your Passwall ${NC}"
 
