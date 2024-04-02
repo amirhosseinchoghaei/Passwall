@@ -55,7 +55,7 @@ echo " - System Arch : $DISTRIB_ARCH"
 
 
 echo " "
-RESULTT=`ls /etc/init.d/passwall`
+RESULTT=`ls /etc/init.d/passwall` 2> /dev/null
 if [ "$RESULTT" == "/etc/init.d/passwall" ]; then
 
 echo -e "${YELLOW} > 4.${NC} ${GREEN} Update Your Passwall ${NC}"
@@ -66,7 +66,7 @@ sleep 1
 
 fi
 
-RESULTTT=`ls /etc/init.d/passwall2`2> /dev/null
+RESULTTT=`ls /etc/init.d/passwall2` 2> /dev/null
 if [ "$RESULTTT" == "/etc/init.d/passwall2" ]; then
 
 echo -e "${YELLOW} > 5.${NC} ${GREEN} Update Your Passwall2 ${NC}"
