@@ -32,6 +32,7 @@ uci commit
 
 /sbin/reload_config
 
+cp passwallx.sh /sbin/passwall
 
 ##Scanning
 
