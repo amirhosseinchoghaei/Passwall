@@ -58,7 +58,7 @@ echo " "
 RESULTT=`ls /etc/init.d/passwall`
 if [ "$RESULTT" == "/etc/init.d/passwall" ]; then
 
-echo -e "${YELLOW} 4.${NC} ${GREEN} Update Your Passwall 1 ${NC}"
+echo -e "${YELLOW} > 4.${NC} ${GREEN} Update Your Passwall ${NC}"
 
  else
            
@@ -69,7 +69,7 @@ fi
 RESULTTT=`ls /etc/init.d/passwall2`
 if [ "$RESULTTT" == "/etc/init.d/passwall2" ]; then
 
-echo -e "${YELLOW} 5.${NC} ${GREEN} Update Your Passwall 2 ${NC}"
+echo -e "${YELLOW} > 5.${NC} ${GREEN} Update Your Passwall2 ${NC}"
 
  else
            
