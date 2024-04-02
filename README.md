@@ -37,6 +37,8 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 🔑 Password : 10203040
 
+ Update command : `passwall --help`
+
 # Types Support
 
 VLESS (XRAY ✅ SING-BOX ✅)
@@ -59,10 +61,6 @@ SOCKS (XRAY ✅ SING-BOX ✅)
 
 HTTP (XRAY ✅ SING-BOX ✅)
 
-# Update
-```
-passwall
-```
 
 #
 
