@@ -66,7 +66,7 @@ sleep 1
 
 fi
 
-RESULTTT=`ls /etc/init.d/passwall2`
+RESULTTT=`ls /etc/init.d/passwall2`2> /dev/null
 if [ "$RESULTTT" == "/etc/init.d/passwall2" ]; then
 
 echo -e "${YELLOW} > 5.${NC} ${GREEN} Update Your Passwall2 ${NC}"
