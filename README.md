@@ -59,6 +59,10 @@ SOCKS (XRAY ✅ SING-BOX ✅)
 
 HTTP (XRAY ✅ SING-BOX ✅)
 
+# Update
+```
+passwall
+```
 
 #
 
