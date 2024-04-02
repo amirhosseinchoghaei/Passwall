@@ -55,10 +55,20 @@ echo " - System Arch : $DISTRIB_ARCH"
 
 
 echo " "
+RESULTT=`ls /etc/init.d/passwall`
+if [ "$RESULT" == "/etc/init.d/passwall" ]; then
+
+echo -e "${YELLOW} 4.${NC} ${GREEN} Update Your Passwall ${NC}"
+
+ else
+           
+sleep 1
+
+fi
 echo -e "${YELLOW} 1.${NC} ${CYAN} Passwall 1 ${NC}"
 echo -e "${YELLOW} 2.${NC} ${CYAN} Passwall 2 ${NC}"
 echo -e "${YELLOW} 3.${NC} ${YELLOW} CloudFlare IP Scanner ${NC}"
-echo -e "${YELLOW} 4.${NC} ${RED} EXIT ${NC}"
+echo -e "${YELLOW} 5.${NC} ${RED} EXIT ${NC}"
 echo ""
 
 
@@ -103,7 +113,7 @@ curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && b
 
 
 
-4)
+5)
             echo ""
             echo -e "${GREEN}Exiting...${NC}"
             exit 0
