@@ -85,7 +85,7 @@ echo ""
 
 
 echo " "
- read -p " -Select Passwall Version : " choice
+ read -p " -Select Passwall Option : " choice
 
     case $choice in
 
