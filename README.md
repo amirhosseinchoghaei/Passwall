@@ -31,11 +31,11 @@ rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 
 - After installation , settings will be change :
  
-⚠️ LAN IP ADDRESS : 192.168.27.1
+⚠️ LAN IP ADDRESS : `192.168.27.1`
 
-📶 WiFi 2Ghz SSID : VPN 2G
+📶 WiFi 2Ghz SSID : `VPN 2G`
 
-🔑 Password : 10203040
+🔑 Password : `10203040`
 
  Update command : `passwall --help`
 
