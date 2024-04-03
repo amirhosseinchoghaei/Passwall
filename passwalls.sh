@@ -60,12 +60,14 @@ opkg update
 
 echo -e "${GREEN} INSTALLING PASSWALL.2 FOR SNAPSHOT . ${NC}"
 
-opkg install luci-app-passwall2
-sleep 3
 opkg remove dnsmasq
 sleep 3
 opkg install dnsmasq-full
 sleep 2
+opkg install unzip
+sleep 2
+opkg install luci-app-passwall2
+sleep 3
 opkg install ipset
 sleep 2
 opkg install ipt2socks
