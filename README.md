@@ -64,7 +64,7 @@ HTTP (XRAY ✅ SING-BOX ✅)
 
 #
 
-`⭐Recommended Router : [Xiaomi AX3000T](https://openwrt.org/inbox/toh/xiaomi/ax3000t) `
+`⭐Recommended Router : ` [Xiaomi AX3000T](https://openwrt.org/inbox/toh/xiaomi/ax3000t) 
 
 
 
