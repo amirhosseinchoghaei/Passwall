@@ -21,7 +21,7 @@ rm -f passwallx.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei
 ```
 Done !
 
-# IF You are Using `SNAPSHOT`
+# IF You are Using `SNAPSHOT` :
 ```
 rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 ```
