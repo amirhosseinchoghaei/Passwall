@@ -56,11 +56,11 @@ done
 
 opkg update
 sleep 3
-opkg install luci-app-passwall
-sleep 3
 opkg remove dnsmasq
 sleep 2
 opkg install dnsmasq-full
+sleep 3
+opkg install luci-app-passwall
 sleep 3
 opkg install ipset
 sleep 2
