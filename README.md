@@ -8,9 +8,9 @@
 
 # System Requirements :
 
-- CPU : +700 MHz ✅
+- CPU : `+700 MHz ✅`
 
-- RAM : +256 MB  ✅
+- RAM : `+256 MB  ✅`
 
 
 # INSTALL PASSWALL : 
