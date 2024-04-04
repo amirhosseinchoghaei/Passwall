@@ -32,6 +32,22 @@ uci commit
 
 /sbin/reload_config
 
+SNNAP=`grep -o SNAPSHOT /etc/openwrt_release | sed -n '1p'`
+
+if [ "$SNNAP" == "SNAPSHOT" ]; then
+
+echo -e "${YELLOW} SNAPSHOT Version Detected ! ${NC}"
+
+rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
+
+exit 1
+
+ else
+           
+echo -e "${GREEN} Updating Packages ... ${NC}"
+
+fi
+
 ### Update Packages ###
 
 opkg update
