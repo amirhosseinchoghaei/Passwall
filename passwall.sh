@@ -143,6 +143,22 @@ exit 1
 
 fi
 
+DNS=`ls /usr/lib/opkg/info/dnsmasq-full.control`
+
+if [ "$DNS" == "/usr/lib/opkg/info/dnsmasq-full.control" ]; then
+
+echo -e "${GREEN} dnsmaq-full Installed successfully ! ${NC}"
+
+ else
+           
+echo -e "${RED} Package : dnsmasq-full not installed ! (Bad internet connection .) ${NC}"
+
+exit 1
+
+fi
+
+
+
 
 ####install_xray
 opkg install xray-core
