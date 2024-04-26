@@ -10,10 +10,12 @@
 
 - CPU : `+700 MHz ✅`
 
-- RAM : `+256 MB  ✅`
+- RAM : `+256 MB ✅`
 
 
 # INSTALL PASSWALL : 
+
+🔴🔴🔴 The Routers With 128 MB Memory RAM , Please Install [OPENWRT 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/)
 
 Run this command in openwrt remote ssh
 ```
@@ -64,6 +66,7 @@ HTTP (XRAY ✅ SING-BOX ✅)
 
 
 ✅ Tested On : Xiaomi 4a Gigabit , TP-Link C6 v3 , Mikrotik Hap ac2 , GL.iNet AR300M (NOR) , Linksys ea7500. v1-v2 , Linksys ea8100 v1-v2 , ASUS RT-N66U , Xiaomi AX3600 , Xiomi AX3200 , Xiaomi AX6000 , Xiaomi AX3000T
+
 
 # Features
 
