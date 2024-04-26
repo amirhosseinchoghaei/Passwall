@@ -15,7 +15,7 @@
 
 # INSTALL PASSWALL : 
 
-🔴🔴🔴 The Routers With 128 MB Memory RAM , Please Install [OPENWRT 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/)
+🔴🔴🔴 The Routers With 128 MB Memory RAM , Please Install [OPENWRT 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/) First .
 
 Run this command in openwrt remote ssh
 ```
