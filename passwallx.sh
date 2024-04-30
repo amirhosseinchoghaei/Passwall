@@ -79,7 +79,7 @@ sleep 1
 fi
 
 echo -e "${YELLOW} 1.${NC} ${CYAN} Install Passwall 1 ${NC}"
-echo -e "${YELLOW} 2.${NC} ${CYAN} Install Passwall 2 ${NC}"
+echo -e "${YELLOW} 2.${NC} ${CYAN} Install Passwall 2 ( Requires a +256 MB RAM )${NC}"
 echo -e "${YELLOW} 3.${NC} ${YELLOW} CloudFlare IP Scanner ${NC}"
 echo -e "${YELLOW} 6.${NC} ${RED} EXIT ${NC}"
 echo ""
