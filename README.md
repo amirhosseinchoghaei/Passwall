@@ -15,7 +15,7 @@
 
 # INSTALL PASSWALL : 
 
-🔴🔴🔴 The Routers With 128 MB Memory RAM , Please downgrade to [OPENWRT 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/) .
+🔴🔴🔴 The Routers With `128 MB RAM Memory` , Please `downgrade` to [OPENWRT 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/) 🔴🔴🔴
 
 Run this command in openwrt remote ssh
 ```
