@@ -225,8 +225,40 @@ uci set passwall2.myshunt.Direct='_direct'
 
 uci commit passwall2
 
-
 uci commit system
+
+###IP_PUBLIC
+
+rm /etc/config/internet-detector 2> /dev/null
+
+opkg remove luci-app-internet-detector 2> /dev/null
+
+opkg remove internet-detector 2> /dev/null
+
+wget --no-check-certificate -O /tmp/internet-detector_1.3-0_all.ipk https://github.com/gSpotx2f/packages-openwrt/raw/master/current/internet-detector_1.3-0_all.ipk
+opkg install /tmp/internet-detector_1.3-0_all.ipk
+rm /tmp/internet-detector_1.3-0_all.ipk
+/etc/init.d/internet-detector start
+/etc/init.d/internet-detector enable
+
+wget --no-check-certificate -O /tmp/luci-app-internet-detector_1.3-0_all.ipk https://github.com/gSpotx2f/packages-openwrt/raw/master/current/luci-app-internet-detector_1.3-0_all.ipk
+opkg install /tmp/luci-app-internet-detector_1.3-0_all.ipk
+rm /tmp/luci-app-internet-detector_1.3-0_all.ipk
+/etc/init.d/rpcd restart
+
+uci set internet-detector.internet.mod_public_ip_enabled='1'
+uci set internet-detector.internet.mod_public_ip_provider='google'
+uci set internet-detector.internet.mod_public_ip_qtype='0'
+uci set internet-detector.internet.mod_public_ip_interval='600'
+uci set internet-detector.internet.mod_public_ip_timeout='3'
+uci set internet-detector.internet.mod_public_ip_enable_ip_script='0'
+
+uci commit 
+
+/etc/init.d/internet-detector restart
+
+########
+
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
 
