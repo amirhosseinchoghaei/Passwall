@@ -12,6 +12,13 @@
 
 - RAM : `+256 MB ✅`
 
+- ⚠️ Before Installation, Make sure `Wan Address` And `Lan address` are not same !
+   
+  ➡️ Example : Wan Address : `192.168.1.XXX` And Lan Adress : `192.168.1.1` ❌ You will get Error .
+  Change Lan Address to another ip address Like : 192.168.27.1
+
+- ⚠️ Make Sure `Wan Interface` Get's `DNS` From WAN , otherwise set the DNS Manually .
+
 
 # INSTALL PASSWALL : 
 
