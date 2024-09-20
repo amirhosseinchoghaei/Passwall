@@ -99,7 +99,7 @@ sleep 1
 opkg install kmod-netlink-diag
 sleep 1
 opkg install kmod-tun
-
+opkg install kmod-nft-tproxy kmod-nft-socket
 echo -e "${GREEN}Done ! ${NC}"
 
 
