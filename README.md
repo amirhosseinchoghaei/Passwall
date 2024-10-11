@@ -45,6 +45,8 @@ Done !
 
 # Types Support
 
+Mahsa Core ✅
+
 VLESS (XRAY ✅ SING-BOX ✅)
 
 VMESS (XRAY ✅ SING-BOX ✅)
