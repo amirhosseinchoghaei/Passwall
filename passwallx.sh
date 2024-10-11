@@ -80,6 +80,7 @@ fi
 
 echo -e "${YELLOW} 1.${NC} ${CYAN} Install Passwall 1 ${NC}"
 echo -e "${YELLOW} 2.${NC} ${CYAN} Install Passwall 2 ( Requires a +256 MB RAM )${NC}"
+echo -e "${YELLOW} 9.${NC} ${CYAN} Install Passwall 2 + Mahsa Core${NC}"
 echo -e "${YELLOW} 3.${NC} ${YELLOW} CloudFlare IP Scanner ${NC}"
 echo -e "${YELLOW} 6.${NC} ${RED} EXIT ${NC}"
 echo ""
@@ -156,6 +157,18 @@ opkg install luci-app-passwall2
 
            read -s -n 1
            ;;
+
+ 9)
+
+echo "Installing Passwall 2 With Mahsa Core ..."
+
+sleep 2
+
+rm -f passwall.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall.sh && chmod 777 passwall.sh && sh passwall.sh
+
+
+;;
+
 
  *)
            echo "  Invalid option Selected ! "
