@@ -228,7 +228,8 @@ uci commit system
 
 >/usr/lib/lua/luci/passwall2/com.lua
 
-echo "local _M = {}
+tee /usr/lib/lua/luci/passwall2/com.lua <<EOF
+local _M = {}
 
 local function gh_release_url(self)
         return "https://api.github.com/repos/" .. self.repo .. "/releases/latest                                                                                                             "
@@ -284,7 +285,7 @@ _M.xray = {
 }
 
 return _M
-" >> /usr/lib/lua/luci/passwall2/com.lua
+EOF
 
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
