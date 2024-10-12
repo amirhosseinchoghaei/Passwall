@@ -275,7 +275,7 @@ sleep 5
 
 rm passwall2x.sh
 
-rm passwallx.sh
+rm mahsa.sh
 
 /sbin/reload_config
 
