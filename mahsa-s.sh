@@ -232,14 +232,6 @@ uci commit system
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
 echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
-echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
-echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
-
-echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
-
-echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
-
-sleep 10
 
 uci delete wireless.radio0.disabled='1'
 uci set wireless.default_radio0.ssid='VPN 2G'
@@ -266,14 +258,11 @@ my.irancell.ir'
 
 uci commit
 
-echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
+echo -e "${YELLOW}** Warning : To install Mahsa Core visit > Passwall2 > App Update > Xray Force Update ** ${ENDCOLOR}"
 
-echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
+echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
 
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
 sleep 5
 
-rm passwalls.sh
-
-reboot
+rm mahsa-s.sh
