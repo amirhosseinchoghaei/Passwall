@@ -113,7 +113,7 @@ rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghae
  
 ;;
 
-3)
+9)
         
 echo "Installing CloudFlare IP SCAN ..."
 
@@ -158,7 +158,7 @@ opkg install luci-app-passwall2
            read -s -n 1
            ;;
 
- 9)
+ 3)
 
 echo "Installing Passwall 2 With Mahsa Core ..."
 
