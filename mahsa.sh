@@ -234,8 +234,6 @@ echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
 
-sleep 10
-
 uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
