@@ -164,7 +164,7 @@ echo "Installing Passwall 2 With Mahsa Core ..."
 
 sleep 2
 
-rm -f passwall.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/refs/heads/main/mahsa.sh && chmod 777 mahsa.sh && sh mahsa.sh
+rm -f mahsa.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/refs/heads/main/mahsa.sh && chmod 777 mahsa.sh && sh mahsa.sh
 
 
 ;;
