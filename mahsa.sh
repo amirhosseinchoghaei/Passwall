@@ -234,10 +234,6 @@ echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
 
 echo -e "${YELLOW}** NEW IP ADDRESS : 192.168.27.1 **${ENDCOLOR}"
 
-echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
-
-echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
-
 sleep 10
 
 uci set system.@system[0].hostname=By-AmirHossein
@@ -271,16 +267,13 @@ uci commit
 
 uci commit
 
-rm /usr/bin/xray 
+rm /usr/bin/xray
 
-echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
+echo -e "${YELLOW}** Warning : To install Mahsa Core visit > Passwall2 > App Update > Xray Force Update ** ${ENDCOLOR}"
 
-echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
+echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
 
 sleep 5
-
-reboot
 
 rm passwall2x.sh
 
