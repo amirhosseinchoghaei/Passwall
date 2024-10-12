@@ -269,7 +269,7 @@ _M.singbox = {
 }
 
 _M.xray = {
-	name = "Xray",
+	name = "Mahsa",
 	repo = "GFW-knocker/Xray-core",
 	get_url = gh_pre_release_url,
 	cmd_version = "version | awk '{print $2}' | sed -n 1P",
