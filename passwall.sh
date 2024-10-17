@@ -265,40 +265,14 @@ uci set passwall.@global[0].udp_proxy_mode='proxy'
 
 uci commit passwall
 
-uci set network.lan.proto='static'
-uci set network.lan.netmask='255.255.255.0'
-uci set network.lan.ipaddr='192.168.27.1'
-uci set network.lan.delegate='0'
-
-
-uci commit network
-
-
-uci delete wireless.radio0.disabled='1'
-uci set wireless.default_radio0.ssid='VPN 2G'
-uci set wireless.default_radio0.encryption='psk2+ccmp'
-uci set wireless.default_radio0.key='10203040'
-uci set wireless.default_radio0.mode='ap'
-uci set wireless.default_radio0.network='lan'
-
-uci commit wireless
 
 uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
 my.irancell.ir'
 
 uci commit
 
-echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
-
-echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
-
-sleep 5
-
-reboot
+echo -e "${YELLOW}** Installation Completed ** ${ENDCOLOR}"
 
 rm passwallx.sh 2> /dev/null
 
 /sbin/reload_config
-
-/etc/init.d/network reload
