@@ -227,8 +227,6 @@ uci commit passwall2
 
 uci commit system
 
-sleep 10
-
 uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
@@ -246,4 +244,3 @@ rm passwall2x.sh
 rm passwallx.sh
 
 /sbin/reload_config
-
