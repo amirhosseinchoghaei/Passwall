@@ -228,23 +228,6 @@ uci set system.@system[0].timezone='<+0330>-3:30'
 
 uci commit system
 
-echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
-echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
-echo -e "${YELLOW} WiFi SSID : VPN 5G ${ENDCOLOR}"
-echo -e "${GREEN} Password : 10203040 ${ENDCOLOR}"
-
-echo -e "${YELLOW}** Warning : ALL Settings Will be Change in 10 Seconds ** ${ENDCOLOR}"
-
-echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
-
-sleep 10
-
-uci delete wireless.radio0.disabled='1'
-uci set wireless.default_radio0.ssid='VPN 2G'
-uci set wireless.default_radio0.encryption='psk2+ccmp'
-uci set wireless.default_radio0.key='10203040'
-uci set wireless.default_radio0.mode='ap'
-uci set wireless.default_radio0.network='lan'
 
 uci commit wireless
 
@@ -252,26 +235,15 @@ uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
 
-uci set network.lan.proto='static'
-uci set network.lan.netmask='255.255.255.0'
-uci set network.lan.ipaddr='192.168.27.1'
-uci set network.lan.delegate='0'
-
-uci commit network
-
 uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
 my.irancell.ir'
 
 uci commit
 
-echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
+echo -e "${YELLOW}** Installation Completed ** ${ENDCOLOR}"
+echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
 
-echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
-
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
-
-sleep 5
+/sbin/reload_config
 
 rm passwalls.sh
 
-reboot
