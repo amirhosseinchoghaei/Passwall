@@ -45,7 +45,7 @@ Done !
 
 # Types Support
 
-Mahsa Core ✅
+[Mahsa Core](https://github.com/GFW-knocker/Xray-core/releases) ↩️
 
 VLESS (XRAY ✅ SING-BOX ✅)
 
