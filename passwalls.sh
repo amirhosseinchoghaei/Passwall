@@ -8,7 +8,9 @@ CYAN='\033[0;36m'
 GRAY='\033[0;37m'
 NC='\033[0m' # No Color
 
+echo -e "${RED} Snapshot not Supported. ! ${NC}"
 
+exit 1
 
 echo "Running as root..."
 sleep 2
