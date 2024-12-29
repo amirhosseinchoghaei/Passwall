@@ -13,11 +13,7 @@
 - RAM : `+256 MB ✅`
 
 - ⚠️ Before Installation, Make sure `Wan Address` And `Lan address` are not same !
-   
-  ➡️ Example : Wan Address : `192.168.1.XXX` And Lan Adress : `192.168.1.1` ❌ You will get Error .
-  Change Lan Address to another ip address Like : 192.168.27.1
-  
-
+     
 # INSTALL PASSWALL : 
 
 🔴🔴🔴 The Routers With `128 MB RAM Memory` , Please `downgrade` to [OPENWRT 22.03.3](https://archive.openwrt.org/releases/22.03.3/targets/) 🔴🔴🔴
