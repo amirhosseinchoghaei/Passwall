@@ -2,7 +2,6 @@
 [![visitor badge](https://img.shields.io/badge/Chat%20on-Telegram-blue.svg)](https://t.me/AmirHosseinTSL) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 # How to install Passwall + Xray & Sing-Box on openwrt
 
-![This is an image](https://pars-space.ir/wp-content/uploads/2023/09/v2ray-openwrt.jpg)
 
 
 
