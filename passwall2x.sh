@@ -75,6 +75,8 @@ opkg remove dnsmasq
 sleep 3
 opkg install dnsmasq-full
 sleep 2
+opkg install wget-ssl
+sleep 1
 opkg install unzip
 sleep 2
 opkg install luci-app-passwall2
@@ -92,6 +94,8 @@ sleep 1
 opkg install kmod-netlink-diag
 sleep 1
 opkg install kmod-tun
+sleep 1
+opkg install ipset
 
 >/etc/banner
 
