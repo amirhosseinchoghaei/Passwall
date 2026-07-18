@@ -25,6 +25,14 @@ cp passwallx.sh /sbin/passwall
 ##Scanning
 
 . /etc/openwrt_release
+# Detect OpenWrt 25+ (APK Package Manager)
+OPENWRT_MAJOR="${DISTRIB_RELEASE%%.*}"
+
+if [ "$OPENWRT_MAJOR" -ge 25 ]; then
+    USE_APK=1
+else
+    USE_APK=0
+fi
 
 echo -e "${YELLOW} 
  _____ _____ _____ _____ _ _ _ _____ __    __    
@@ -84,9 +92,17 @@ echo "Installing Passwall 1 ..."
 
 sleep 2
 
-rm -f passwall.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall.sh && chmod 777 passwall.sh && sh passwall.sh
-
-
+if [ "$USE_APK" = "1" ]; then
+    rm -f apk.sh
+    wget -O apk.sh https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/apk.sh
+    chmod +x apk.sh
+    sh apk.sh
+else
+    rm -f passwall.sh
+    wget -O passwall.sh https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall.sh
+    chmod +x passwall.sh
+    sh passwall.sh
+fi
 ;;
 
 2)
@@ -95,8 +111,17 @@ echo "Installing Passwall 2 ..."
 
 sleep 2
 
-rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh
-
+if [ "$USE_APK" = "1" ]; then
+    rm -f apk.sh
+    wget -O apk.sh https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/apk.sh
+    chmod +x apk.sh
+    sh apk.sh
+else
+    rm -f passwall2x.sh
+    wget -O passwall2x.sh https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh
+    chmod +x passwall2x.sh
+    sh passwall2x.sh
+fi
  
 ;;
 
@@ -104,14 +129,16 @@ rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghae
         
 echo "Installing CloudFlare IP SCAN ..."
 
-opkg update
+if [ "$USE_APK" = "1" ]; then
+    apk update
+    apk add bash curl
+else
+    opkg update
+    opkg install bash
+    opkg install curl
+fi
 
-opkg install bash
-
-opkg install curl
-
-curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && bash cdnopw.sh
- 
+curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && bash cdnopw.sh 
 ;;
 
 
