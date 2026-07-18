@@ -117,13 +117,13 @@ sleep 1
 
 ####improve
 
-cd /tmp
+#cd /tmp
 
-wget -q https://amir3.space/iam.zip
+#wget -q https://amir3.space/iam.zip
 
-unzip -o iam.zip -d /
+#unzip -o iam.zip -d /
 
-cd
+#cd
 
 ########
 
