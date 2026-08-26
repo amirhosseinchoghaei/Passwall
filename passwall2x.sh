@@ -21,22 +21,24 @@ uci set system.@system[0].timezone='<+0330>-3:30'
 
 uci commit system
 uci commit network
-uci commit
 
 /sbin/reload_config
+
+# بررسی اسنپ‌شات قبل از متغیرهای عددی
+SNNAP=$(grep -o "SNAPSHOT" /etc/openwrt_release 2>/dev/null | head -n 1)
+if [ "$SNNAP" == "SNAPSHOT" ]; then
+    echo -e "${YELLOW} SNAPSHOT Version Detected ! ${NC}"
+    rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod +x passwalls.sh && sh passwalls.sh
+    exit 0
+fi
 
 . /etc/openwrt_release
 OPENWRT_MAJOR="${DISTRIB_RELEASE%%.*}"
 release="${DISTRIB_RELEASE%.*}"
 arch="$DISTRIB_ARCH"
 
-SNNAP=$(grep -o SNAPSHOT /etc/openwrt_release | sed -n '1p')
-
-if [ "$SNNAP" == "SNAPSHOT" ]; then
-    echo -e "${YELLOW} SNAPSHOT Version Detected ! ${NC}"
-    rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
-    exit 1
-fi
+# پیش‌فرض عدد صفر در صورت عدم شناسایی نسخه
+OPENWRT_MAJOR="${OPENWRT_MAJOR:-0}"
 
 ### Check Version & Install Packages ###
 
@@ -60,28 +62,25 @@ else
     echo -e "${GREEN} OpenWrt < 25 Detected (Using OPKG) ... ${NC}"
 
     opkg update
-    wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/ipk.pub
-    opkg-key add passwall.pub
-    
-> /etc/opkg/customfeeds.conf
-    
-read release arch << EOF
-$(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
-EOF
-for feed in passwall_packages passwall2; do
-  echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
-done
+    wget -O /tmp/passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/ipk.pub
+    opkg-key add /tmp/passwall.pub
+    rm -f /tmp/passwall.pub
+
+    > /etc/opkg/customfeeds.conf
+    for feed in passwall_luci passwall_packages passwall2; do
+        echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
+    done
 
     opkg update
-    sleep 3
+    sleep 2
     opkg remove dnsmasq
-    sleep 3
+    sleep 2
     opkg install dnsmasq-full
-    sleep 2
+    sleep 1
     opkg install wget-ssl unzip luci-app-passwall2
-    sleep 2
-    opkg install kmod-nft-socket kmod-nft-tproxy ca-bundle kmod-inet-diag kernel kmod-netlink-diag kmod-tun ipset
-    sleep 2
+    sleep 1
+    opkg install kmod-nft-socket kmod-nft-tproxy ca-bundle kmod-inet-diag kmod-netlink-diag kmod-tun ipset
+    sleep 1
     opkg install xray-core
 fi
 
@@ -91,17 +90,16 @@ echo "    ___    __  ___________  __  ______  __________ ___________   __
    /   |  /  |/  /  _/ __ \/ / / / __ \/ ___/ ___// ____/  _/ | / /
   / /| | / /|_/ // // /_/ / /_/ / / / /\__ \\__ \ / __/  / //  |/ /
  / ___ |/ /  / // // _  _/ __  / /_/ /___/ /__/ / /____/ // /|  /
-/_/  |_/_/  /_/___/_/ |_/_/ /_/\____//____/____/_____/___/_/ |_/                                                                                                                                           
+/_/  |_/_/  /_/___/_/ |_/_/ /_/\____//____/____/_____/___/_/ |_/
 telegram : @AmirHosseinTSL" >> /etc/banner
 
 sleep 1
 
 RESULT5=$(ls /etc/init.d/passwall2 2>/dev/null)
-
 if [ "$RESULT5" == "/etc/init.d/passwall2" ]; then
     echo -e "${GREEN} Passwall.2 Installed Successfully ! ${NC}"
 else
-    echo -e "${RED} Can not Download Packages ... Check your internet Connection . ${NC}"
+    echo -e "${RED} Cannot Download Packages ... Check your internet Connection . ${NC}"
     exit 1
 fi
 
@@ -117,15 +115,13 @@ fi
 
 #### Check Xray ####
 RESULT=$(ls /usr/bin/xray 2>/dev/null)
-
 if [ "$RESULT" == "/usr/bin/xray" ]; then
     echo -e "${GREEN} XRAY : OK ! ${NC}"
 else
     echo -e "${YELLOW} XRAY : NOT INSTALLED X ${NC}"
-    sleep 2
+    sleep 1
     echo -e "${YELLOW} Trying to install Xray on temp Space ... ${NC}"
-    sleep 2
-    rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+    rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod +x amirhossein.sh && sh amirhossein.sh
 fi
 
 #### PassWall 2 Configs ####
@@ -175,16 +171,14 @@ uci set passwall2.Direct.domain_list='regexp:^.+\.ir$
 geosite:category-ir'
 
 uci set passwall2.myshunt.Direct='_direct'
-
 uci commit passwall2
-uci commit system
 
 uci set system.@system[0].hostname=By-AmirHossein
 uci commit system
 
 uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
 my.irancell.ir'
-uci commit
+uci commit dhcp
 
 echo -e "${YELLOW}** Installation Completed ** ${NC}"
 echo -e "${MAGENTA} Made With Love By : AmirHossein ${NC}"
