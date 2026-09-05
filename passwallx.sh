@@ -157,9 +157,21 @@ opkg install luci-app-passwall
         
 echo "Updating Passwall v2"
 
-opkg update
+# Detect OpenWrt version
+OPENWRT_VERSION=$(awk -F"'" '/DISTRIB_RELEASE/ {print $2}' /etc/openwrt_release)
+OPENWRT_MAJOR=$(echo "$OPENWRT_VERSION" | cut -d. -f1)
 
-opkg install luci-app-passwall2
+if [ "$OPENWRT_MAJOR" -ge 25 ]; then
+    echo "OpenWrt $OPENWRT_VERSION detected - using APK"
+
+    apk update
+    apk add luci-app-passwall2
+else
+    echo "OpenWrt $OPENWRT_VERSION detected - using OPKG"
+
+    opkg update
+    opkg install luci-app-passwall2
+fi
  
 ;;
 
