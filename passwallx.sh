@@ -129,16 +129,25 @@ fi
         
 echo "Installing CloudFlare IP SCAN ..."
 
-if [ "$USE_APK" = "1" ]; then
-    apk update
-    apk add bash curl
-else
+# Detect OpenWrt version
+OPENWRT_VERSION=$(awk -F"'" '/DISTRIB_RELEASE/ {print $2}' /etc/openwrt_release)
+OPENWRT_MAJOR=$(echo "$OPENWRT_VERSION" | cut -d. -f1)
+
+if [ "$OPENWRT_MAJOR" -lt 25 ]; then
+
+    echo "OpenWrt $OPENWRT_VERSION detected - installing CloudFlare IP SCAN"
+
     opkg update
     opkg install bash
     opkg install curl
-fi
 
-curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && bash cdnopw.sh 
+    curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && bash cdnopw.sh
+
+else
+
+    echo "OpenWrt $OPENWRT_VERSION detected - CloudFlare IP SCAN is skipped on OpenWrt 25+"
+
+fi
 ;;
 
 
